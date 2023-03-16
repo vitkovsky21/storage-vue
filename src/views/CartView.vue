@@ -1,7 +1,7 @@
 <template v-if="storageStore.storage">
     <FilterComp />
 
-    <div v-for="product in storageStore.cart" :key="product.id">
+    <div v-for="product in storageStore.filteredCart" :key="product.id">
         <div class="products" v-if="storageStore.sortFilter.includes(product.type)">
             <div class="overview">
                 <div class="product-image">
@@ -9,7 +9,7 @@
                 </div>
                 <div class="info">
                     <h4 class="type">{{ product.type }}</h4>
-                    <h4 class="title">Брус №{{ product.id }}</h4>
+                    <h4 class="title">{{ product.name }} v.{{ product.id }}</h4>
                     <div class="location">
                         <img src="@/assets/geo.png" alt="" />
                         <span>Санкт-Петербург, Красное Село</span>

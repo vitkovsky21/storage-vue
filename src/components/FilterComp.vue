@@ -7,7 +7,7 @@
             <button @click="filterBy(auction, 2)" :class="{ active: storageStore.sortId === 2 }">Аукцион</button>
         </div>
         <div class="search">
-            <input type="text">
+            <input type="text" v-model='storageStore.chars'>
             <img src="@/assets/search.png" alt="#">
         </div>
     </div>
@@ -16,7 +16,6 @@
 <script lang="ts" setup>
 import { useStorageStore } from '@/stores/storage';
 import { ref, type Ref } from 'vue';
-
 const auction: Ref<string> = ref("Аукцион");
 const sellings: Ref<string> = ref("Прямые продажи");
 
