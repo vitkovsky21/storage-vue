@@ -2,7 +2,7 @@
     <FilterComp />
 
     <div v-for="product in storageStore.storage" :key="product.id">
-        <div class="products" v-if="storageStore.sortFilter.includes(product.type)">
+        <div class="products" v-if="storageStore.sortFilter.includes(product.type) && product.favourite === true">
             <div class="overview">
                 <div class="product-image">
                     <img src="@/assets/product.png" alt="#">
@@ -45,7 +45,7 @@
     </div>
 </template>
 
-<script setup lang="ts">
+<script lang="ts" setup>
 import { RouterLink, RouterView } from 'vue-router';
 import { useStorageStore } from '@/stores/storage';
 
@@ -71,7 +71,7 @@ const updateFavourite = (product: any) => {
 const addToCart = (product: any) => {
     let productCopy = product;
     let toggler;
-    
+
     product.toggler = false;
 
     if (storageStore.cart.length == 0) {

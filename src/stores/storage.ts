@@ -5,6 +5,7 @@ export const useStorageStore = defineStore({
   id: 'storage',
   state: () => ({
     storage: [],
+    cart: [],
     sortFilter: localStorage.getItem('type')
       ? localStorage.getItem('type')
       : 'Аукцион Прямые продажи',

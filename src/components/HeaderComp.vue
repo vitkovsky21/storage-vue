@@ -2,13 +2,13 @@
     <div class="header">
         <div class="panel"></div>
         <div class="navbar">
-            <RouterLink to="/" class="link"><img src="@/assets/favourite.png" alt="#" />
+            <RouterLink to="/favourite" class="link"><img src="@/assets/favourite.png" alt="#" />
                 <p>Избранное</p>
             </RouterLink>
-            <RouterLink to="/" class="link active"><img src="@/assets/stock.png" alt="#" />
+            <RouterLink to="/" class="link"><img src="@/assets/stock.png" alt="#" />
                 <p>Склад</p>
             </RouterLink>
-            <RouterLink to="/" class="link"><img src="@/assets/cart.png" alt="#" />
+            <RouterLink to="/cart" class="link"><img src="@/assets/cart.png" alt="#" />
                 <p>Сделки</p>
             </RouterLink>
         </div>
@@ -53,7 +53,7 @@
     border-radius: 10px;
 }
 
-.link.active {
+.link.router-link-active {
     background: #F4F5F9;
 }
 

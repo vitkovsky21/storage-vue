@@ -1,52 +1,62 @@
-{
-    "products": [
+[
         {
             "id": 1,
-            "type": "Аукцион"
+            "type": "Аукцион",
+            "favourite": false
         },        
         {
             "id": 2,
-            "type": "Прямые продажи"
+            "type": "Прямые продажи",
+            "favourite": false
         },        
         {
             "id": 3,
-            "type": "Аукцион"
+            "type": "Аукцион",
+            "favourite": false
         },        
         {
             "id": 4,
-            "type": "Прямые продажи"
+            "type": "Прямые продажи",
+            "favourite": false
         },        
         {
             "id": 5,
-            "type": "Аукцион"
+            "type": "Аукцион",
+            "favourite": false
         },        
         {
             "id": 6,
-            "type": "Прямые продажи"
+            "type": "Прямые продажи",
+            "favourite": false
         },        
         {
             "id": 7,
-            "type": "Прямые продажи"
+            "type": "Прямые продажи",
+            "favourite": false
         },        
         {
             "id": 8,
-            "type": "Прямые продажи"
+            "type": "Прямые продажи",
+            "favourite": false
         },        
         {
             "id": 9,
-            "type": "Аукцион"
+            "type": "Аукцион",
+            "favourite": false
         },        
         {
             "id": 10,
-            "type": "Прямые продажи"
+            "type": "Прямые продажи",
+            "favourite": false
         },        
         {
             "id": 11,
-            "type": "Прямые продажи"
+            "type": "Прямые продажи",
+            "favourite": false
         },        
         {
             "id": 12,
-            "type": "Прямые продажи"
+            "type": "Прямые продажи",
+            "favourite": false
         }
-    ]
-}
+]

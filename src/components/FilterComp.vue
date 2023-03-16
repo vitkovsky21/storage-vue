@@ -13,7 +13,7 @@
     </div>
 </template>
 
-<script setup lang="ts">
+<script lang="ts" setup>
 import { useStorageStore } from '@/stores/storage';
 import { ref, type Ref } from 'vue';
 

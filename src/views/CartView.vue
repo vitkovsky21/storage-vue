@@ -1,7 +1,7 @@
 <template v-if="storageStore.storage">
     <FilterComp />
 
-    <div v-for="product in storageStore.storage" :key="product.id">
+    <div v-for="product in storageStore.cart" :key="product.id">
         <div class="products" v-if="storageStore.sortFilter.includes(product.type)">
             <div class="overview">
                 <div class="product-image">
@@ -26,17 +26,18 @@
                 </div>
             </div>
             <div class="card" v-if="storageStore.sortFilter.includes(product.type)">
-                <h2 class="title">11 000 ₽</h2>
+                <h2 class="title">{{product.amount ? `${makeSum(product.amount)} ₽` : 'Оплачено'}} </h2>
                 <div class="count">
                     <p class="name">Количество</p>
-                    <p class="amount">1 шт</p>
+                    <p class="amount">{{ `${product.amount} шт` }}</p>
                 </div>
                 <div class="price">
                     <p class="name">Стоимость за штуку</p>
                     <p class="amount">11 000 ₽</p>
                 </div>
                 <div class="features">
-                    <button class="cart-button" @click="addToCart(product)">Добавить в сделки</button>
+                    <button class="buy-button" :class="{ bought: product.toggler }"
+                        @click="buyProduct(product)">{{ !product.toggler ? 'Оплатить' : 'Оплачено' }}</button>
                     <img :src="product.favourite ? favouriteActiveIcon : favouriteIcon" alt="#" class="favourite-button"
                         :class="{ active: product.favourite }" @click="updateFavourite(product)" />
                 </div>
@@ -58,41 +59,28 @@ import '../assets/products.css'
 
 const storageStore: any = useStorageStore();
 
+const makeSum = (amount: number) => {
+    return (11000 * amount).toLocaleString(undefined, { minimumFractionDigits: 2 }).slice(0, -3)
+}
+
 const updateFavourite = (product: any) => {
+    product.favourite = true;
     storageStore.storage.forEach((element: any) => {
         if (element.id === product.id) {
-            element.favourite = !element.favourite;
+            if (element.favourite === false) {
+                element.favourite = true;
+            }
         }
     })
 
     localStorage.setItem('storage', JSON.stringify(storageStore.storage));
-}
-
-const addToCart = (product: any) => {
-    let productCopy = product;
-    let toggler;
-    
-    product.toggler = false;
-
-    if (storageStore.cart.length == 0) {
-        productCopy.amount = 1;
-        storageStore.cart = [productCopy];
-    } else {
-        storageStore.cart.forEach((element: any) => {
-            toggler = false;
-            if (element.id === productCopy.id) {
-                productCopy.amount = element.amount + 1;
-                element = productCopy;
-                toggler = true;
-            }
-        });
-
-        if (!toggler) {
-            productCopy.amount = 1;
-            storageStore.cart.push(productCopy);
-        }
-    }
     localStorage.setItem('cart', JSON.stringify(storageStore.cart));
 }
 
+const buyProduct = (product: any) => {
+    product.amount = 0;
+    product.toggler = true;
+
+    localStorage.setItem('cart', JSON.stringify(storageStore.cart));
+}
 </script>
