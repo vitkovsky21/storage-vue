@@ -36,9 +36,12 @@
                     <p class="amount">11 000 ₽</p>
                 </div>
                 <div class="features">
+
                     <button class="cart-button" @click="addToCart(product)">Добавить в сделки</button>
+
                     <img :src="product.favourite ? favouriteActiveIcon : favouriteIcon" alt="#" class="favourite-button"
                         :class="{ active: product.favourite }" @click="updateFavourite(product)" />
+
                 </div>
             </div>
         </div>
@@ -71,7 +74,7 @@ const updateFavourite = (product: any) => {
 const addToCart = (product: any) => {
     let productCopy = product;
     let toggler;
-    
+
     product.toggler = false;
 
     if (storageStore.cart.length == 0) {

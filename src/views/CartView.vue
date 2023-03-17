@@ -26,7 +26,7 @@
                 </div>
             </div>
             <div class="card" v-if="storageStore.sortFilter.includes(product.type)">
-                <h2 class="title">{{product.amount ? `${makeSum(product.amount)} ₽` : 'Оплачено'}} </h2>
+                <h2 class="title">{{ product.amount ? `${makeSum(product.amount)} ₽` : 'Оплачено' }} </h2>
                 <div class="count">
                     <p class="name">Количество</p>
                     <p class="amount">{{ `${product.amount} шт` }}</p>
@@ -36,10 +36,13 @@
                     <p class="amount">11 000 ₽</p>
                 </div>
                 <div class="features">
-                    <button class="buy-button" :class="{ bought: product.toggler }"
-                        @click="buyProduct(product)">{{ !product.toggler ? 'Оплатить' : 'Оплачено' }}</button>
+
+                    <button class="buy-button" :class="{ bought: product.toggler }" @click="buyProduct(product)">{{
+                        !product.toggler ? 'Оплатить' : 'Оплачено' }}</button>
+
                     <img :src="product.favourite ? favouriteActiveIcon : favouriteIcon" alt="#" class="favourite-button"
                         :class="{ active: product.favourite }" @click="updateFavourite(product)" />
+
                 </div>
             </div>
         </div>

@@ -1,3 +1,10 @@
+<template>
+  <div class="main">
+    <HeaderComp />
+    <RouterView />
+  </div>
+</template>
+
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
 import { useStorageStore } from '@/stores/storage';
@@ -23,16 +30,7 @@ if (localStorage.getItem('storage')) {
     localStorage.setItem('storage', JSON.stringify(storageStore.storage))
   })
 }
-
-
 </script>
-
-<template>
-  <div class="main">
-    <HeaderComp />
-    <RouterView />
-  </div>
-</template>
 
 <style scoped>
 body {

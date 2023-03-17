@@ -16,6 +16,7 @@
 <script lang="ts" setup>
 import { useStorageStore } from '@/stores/storage';
 import { ref, type Ref } from 'vue';
+
 const auction: Ref<string> = ref("Аукцион");
 const sellings: Ref<string> = ref("Прямые продажи");
 

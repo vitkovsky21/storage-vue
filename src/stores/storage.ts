@@ -5,8 +5,10 @@ export const useStorageStore = defineStore({
   id: 'storage',
   state: () => ({
     chars: localStorage.getItem('chars') ? localStorage.getItem('chars') : '',
+
     storage: [],
     cart: [],
+
     sortFilter: localStorage.getItem('type')
       ? localStorage.getItem('type')
       : 'Аукцион Прямые продажи',
@@ -18,6 +20,7 @@ export const useStorageStore = defineStore({
         localStorage.setItem('chars', state.chars)
         return val.name.toLowerCase().includes(state.chars.toLowerCase())
       }),
+
     filteredCart: (state) =>
       state.cart.filter((val: any) => {
         localStorage.setItem('chars', state.chars)

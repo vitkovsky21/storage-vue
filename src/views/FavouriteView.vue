@@ -37,8 +37,10 @@
                 </div>
                 <div class="features">
                     <button class="cart-button" @click="addToCart(product)">Добавить в сделки</button>
+
                     <img :src="product.favourite ? favouriteActiveIcon : favouriteIcon" alt="#" class="favourite-button"
                         :class="{ active: product.favourite }" @click="updateFavourite(product)" />
+                        
                 </div>
             </div>
         </div>
