@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 export default axios.create({
-  baseURL: 'http://vitkovsky21.github.io/storage-vue/data.json',
+  baseURL: 'https://vitkovsky21.github.io/storage-vue/data.json',
   responseType: 'json',
   headers: {
     'Content-type': 'application/json',
