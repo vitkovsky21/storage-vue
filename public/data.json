@@ -1,0 +1,74 @@
+[
+        {
+            "id": 1,
+            "name": "Брус",
+            "type": "Аукцион",
+            "favourite": false
+        },        
+        {
+            "id": 2,
+            "name": "Балка",
+            "type": "Прямые продажи",
+            "favourite": false
+        },        
+        {
+            "id": 3,
+            "name": "Перекладина",
+            "type": "Аукцион",
+            "favourite": false
+        },        
+        {
+            "id": 4,
+            "name": "Бревно",
+            "type": "Прямые продажи",
+            "favourite": false
+        },        
+        {
+            "id": 5,
+            "name": "Брус",
+            "type": "Аукцион",
+            "favourite": false
+        },        
+        {
+            "id": 6,
+            "name": "Перекладина",
+            "type": "Прямые продажи",
+            "favourite": false
+        },        
+        {
+            "id": 7,
+            "name": "Брус",
+            "type": "Прямые продажи",
+            "favourite": false
+        },        
+        {
+            "id": 8,
+            "name": "Перекладина",
+            "type": "Прямые продажи",
+            "favourite": false
+        },        
+        {
+            "id": 9,
+            "name": "Брус",
+            "type": "Аукцион",
+            "favourite": false
+        },        
+        {
+            "id": 10,
+            "name": "Балка",
+            "type": "Прямые продажи",
+            "favourite": false
+        },        
+        {
+            "id": 11,
+            "name": "Перекладина",
+            "type": "Прямые продажи",
+            "favourite": false
+        },        
+        {
+            "id": 12,
+            "name": "Брус",
+            "type": "Прямые продажи",
+            "favourite": false
+        }
+]
