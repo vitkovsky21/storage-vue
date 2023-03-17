@@ -15,13 +15,13 @@ export const useStorageStore = defineStore({
     sortId: localStorage.getItem('id') ? Number(localStorage.getItem('id')) : 0
   }),
   getters: {
-    filteredStorage: (state) =>
+    filteredStorage: (state: any) =>
       state.storage.filter((val: any) => {
         localStorage.setItem('chars', state.chars)
         return val.name.toLowerCase().includes(state.chars.toLowerCase())
       }),
 
-    filteredCart: (state) =>
+    filteredCart: (state: any) =>
       state.cart.filter((val: any) => {
         localStorage.setItem('chars', state.chars)
         return val.name.toLowerCase().includes(state.chars.toLowerCase())

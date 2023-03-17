@@ -19,6 +19,7 @@ import http from '../http-common'
 const storageStore: any = useStorageStore();
 
 if (localStorage.getItem('cart')) {
+  // @ts-ignore
   storageStore.cart = JSON.parse(localStorage.getItem('cart'));
 } else {
   storageStore.cart = [];
@@ -26,6 +27,7 @@ if (localStorage.getItem('cart')) {
 }
 
 if (localStorage.getItem('storage')) {
+  // @ts-ignore
   storageStore.storage = JSON.parse(localStorage.getItem('storage'));
 } else {
   http.get('').then(res => {
