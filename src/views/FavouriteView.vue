@@ -1,6 +1,4 @@
 <template v-if="storageStore.storage">
-    <FilterComp />
-
     <div v-for="product in storageStore.filteredStorage" :key="product.id">
         <div class="products" v-if="storageStore.sortFilter.includes(product.type) && product.favourite === true">
             <div class="overview">
@@ -40,7 +38,7 @@
 
                     <img :src="product.favourite ? favouriteActiveIcon : favouriteIcon" alt="#" class="favourite-button"
                         :class="{ active: product.favourite }" @click="updateFavourite(product)" />
-                        
+
                 </div>
             </div>
         </div>
@@ -53,8 +51,6 @@ import { useStorageStore } from '@/stores/storage';
 
 import favouriteIcon from '@/assets/favourite.png';
 import favouriteActiveIcon from '@/assets/favourite-active.png';
-
-import FilterComp from '../components/FilterComp.vue';
 
 import '../assets/products.css'
 

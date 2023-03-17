@@ -1,6 +1,8 @@
 <template>
   <div class="main">
     <HeaderComp />
+    <FilterComp />
+
     <RouterView />
   </div>
 </template>
@@ -10,6 +12,7 @@ import { RouterLink, RouterView } from 'vue-router'
 import { useStorageStore } from '@/stores/storage';
 
 import HeaderComp from './components/HeaderComp.vue';
+import FilterComp from './components/FilterComp.vue';
 
 import http from '../http-common'
 

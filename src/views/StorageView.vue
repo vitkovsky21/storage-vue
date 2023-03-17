@@ -1,6 +1,4 @@
 <template v-if="storageStore.storage">
-    <FilterComp />
-
     <div v-for="product in storageStore.filteredStorage" :key="product.id">
         <div class="products" v-if="storageStore.sortFilter.includes(product.type)">
             <div class="overview">
@@ -54,8 +52,6 @@ import { useStorageStore } from '@/stores/storage';
 
 import favouriteIcon from '@/assets/favourite.png';
 import favouriteActiveIcon from '@/assets/favourite-active.png';
-
-import FilterComp from '../components/FilterComp.vue';
 
 import '../assets/products.css'
 
