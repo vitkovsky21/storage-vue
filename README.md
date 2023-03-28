@@ -1,3 +1,7 @@
+# deploy
+
+https://master--tiny-entremet-01b306.netlify.app/
+
 # storage-vue
 
 This template should help get you started developing with Vue 3 in Vite.
